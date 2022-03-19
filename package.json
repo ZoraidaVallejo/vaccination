@@ -1,0 +1,15 @@
+{
+  "name": "vaccination",
+  "version": "1.0.0",
+  "description": "Clonacion de landing page by [Adhiari Subekti](https://dribbble.com/Adhiari_is)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Zoraida Vallejo <zoraidavallejo@outlook.com>",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "3.2.3"
+  }
+}

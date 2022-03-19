@@ -1,0 +1,18 @@
+$max-website-width: 1200px;
+$lvl3: 920px;
+$lvl2: 750px;
+$min-website-width: 320px;
+
+$breakpoints-map: (
+    'min': 320px,
+    'lvl2': 750px,
+    'lvl3': 920px,
+    'max': $max-website-width
+);
+
+@media only screen and (min-width: $lvl2){
+    
+  }
+  @media only screen and (min-width: $lvl3){
+
+  }

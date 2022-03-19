@@ -1,0 +1,29 @@
+#header {
+  
+  // box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  width: 100%;
+  background-color: rgba(255,255,255,0.95);
+  z-index: 100;
+  border-bottom: 3px solid #fff;
+  
+  .wrapper {
+    max-width: $max-website-width;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 150px;
+  }
+  
+  @media only screen and (min-width: $lvl2){
+    .wrapper {
+      height: 100px;
+    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    + main {
+      padding-top: 100px;
+    }
+  }
+}

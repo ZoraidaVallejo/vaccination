@@ -1,0 +1,52 @@
+#badges {
+  position: relative;
+  img {
+    filter: opacity(0.3) grayscale(0.7);
+    display: flex;
+    margin: auto;
+  }
+  .item {
+    grid-column: span 4;
+  }
+  @media only screen and (min-width: 500px){
+    .item {
+      grid-column: span 2;
+    }
+  }
+  
+  @media only screen and (min-width: $lvl2){
+    &::after {
+      position: absolute;
+      content: '';
+      right: -50px;
+      bottom: -150px;
+      width: 0;
+      height: 0;
+      border-bottom: 100px solid $triangle;
+      border-left: 100px solid transparent;
+    }
+    &::before {
+      content: '';
+      border: 1px solid $border;
+      height: 0;
+      width: 400px;
+      position: absolute;
+      bottom: -151px;
+      right: -50px;
+    }
+  }
+  @media only screen and (min-width: $lvl3){
+     &::before {
+      width: 600px;
+    }
+  }
+  @media only screen and (min-width: $max-website-width){
+    &::after, 
+    &::before {
+      right: -100px;
+    }
+    .item {
+      grid-column: span 1;
+    }
+  }
+}
