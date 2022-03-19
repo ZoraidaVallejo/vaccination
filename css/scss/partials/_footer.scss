@@ -1,0 +1,79 @@
+#footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $light-primary;
+  padding: 50px 0 25px;
+  text-align: center;
+
+  &::before {
+    position: absolute;
+    content: '';
+    right: 19%;
+    bottom: 0;
+    width: 0;
+    height: 0;
+
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 100px solid #e2e9f9;
+  }
+  .wrapper {
+    z-index: 1;
+  }
+
+  .fnav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fnav, .fcontainer {
+    .info {
+      .heading {
+        color: $primary;
+      } 
+    } 
+    .footernav {
+      .flist {
+        li {
+          padding: 7px 0;
+        }
+      }
+    }
+  }
+  .fcontainer {
+    margin-top: 50px;
+    .links {
+      a {
+        padding-left: 15px;
+      }
+    }
+  }
+
+  a, .flist, .copyright, .description {
+    color: $gray;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  @media only screen and (min-width: $lvl2){
+    text-align: left;
+    .fnav, .fcontainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 100px;
+      .footernav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .fcontainer {
+      margin-top: 100px;
+      .links {
+        text-align: right;
+      }
+    }
+  }
+  @media only screen and (min-width: $lvl3){
+
+  }
+}

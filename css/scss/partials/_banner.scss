@@ -1,0 +1,147 @@
+#banner {
+  position: relative;
+  > .item { 
+    grid-column: span 4;
+  }
+  .top-wrapper {
+    margin-bottom: 50px;
+  }
+  .text-wrapper {
+    padding-top: 50px;
+    .icons {
+      .textIco {
+        color: $heading;
+        font-size: 16px;
+      }
+      .yellow {
+        box-shadow: 0px 9px 14px -10px $yellow, 0px 14px 15px -11px $yellow
+      }
+    }
+    .shedule-head {
+      .blue {
+        box-shadow: 0px 9px 14px -5px $primary, 0px 14px 15px -11px $primary
+      }
+    }
+  }
+  .picture-wrapper {
+    display: none;
+  }
+  .form {
+    .wrapper {
+      margin-top: 25px;
+      background-color: rgba(255,255,255,0.9);
+      box-shadow: 0px 15px 20px rgba($primary, 0.15), 0px 0px 20px rgba($primary, 0.05);
+      border-radius: 10px;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+    }
+    .item {
+      grid-column: span 4;
+    }
+    .icons {
+      margin-bottom: 5px;
+    }
+    input, select {
+      border: 0;
+      background-color: transparent;
+      padding-left: 33px;
+      font-family: 'Heebo', sans-serif;
+      font-size: 18px;
+      font-weight: normal;
+      color: $heading;
+      width: 100%;
+    }
+    button {
+      padding: 15px 50px;
+      box-shadow: 5px 7px 20px rgba($primary, 0.35);
+    }
+  }
+  @media only screen and (min-width: 500px){
+    .form {
+      .item {
+        grid-column: span 2;
+      }
+    }
+  }
+  @media only screen and (min-width: $lvl2){
+    &::after {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-top: 50px solid $triangle;
+    }
+  }
+  @media only screen and (min-width: $lvl3){
+    &::before {
+      position: absolute;
+      top: 43%;
+      right: 49%;
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: 100px solid transparent;
+      border-bottom: 100px solid transparent;
+      border-right: 100px solid $triangle;
+    }
+    .heading {
+      span {
+        display: inline-block;
+      }
+    }
+    .shedule-wrapper {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+    .form {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      .wrapper {
+        grid-column: span 4;
+        grid-gap: 0;
+      }
+      .item {
+        grid-column: span 1;
+      }
+    }
+    .text-wrapper {
+      width: 70%;
+    }
+    > .item {
+      grid-column: span 2;
+    }
+    .picture-wrapper {
+      display: block;
+      picture {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+  }
+  @media only screen and (min-width: $max-website-width){
+    .picture-wrapper {
+      min-height: 700px;
+      picture {
+        position: absolute;
+        top: -100px;
+        z-index: -1;
+        display: block;
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+    .shedule-wrapper {
+      bottom: 10%;
+    }
+    .acknowledgments {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

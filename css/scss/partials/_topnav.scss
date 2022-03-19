@@ -1,0 +1,43 @@
+.topnav {
+  display: grid;
+  grid-column: 1 / -1;
+  padding: 10px 0;
+
+  ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+    .link {
+      color: $gray;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 0 5px;
+    }
+    .btn {
+      padding: 5px;
+      font-size: 14px;
+    }
+  }
+  @media only screen and (min-width: $lvl2){
+    ul {
+      flex-wrap: nowrap;
+    }
+    grid-column:  3 / -1;
+  }
+  @media only screen and (min-width: $lvl3){
+    ul {
+      .link {
+        font-size: 18px;
+      }
+      .btn {
+        padding: 10px;
+        font-size: 18px;
+      }
+    } 
+
+  }
+}
